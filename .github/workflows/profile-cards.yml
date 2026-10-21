@@ -1,0 +1,111 @@
+name: Refresh profile cards
+
+on:
+  schedule:
+    - cron: '37 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'Lucatronlk/lucatronlk' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
+
+      - name: Fetch and validate public SVG cards
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p profile
+          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 --silent --show-error \
+            'https://github-readme-stats.vercel.app/api?username=lucatronlk&show_icons=true' -o profile/stats.svg.tmp
+          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 --silent --show-error \
+            'https://github-readme-stats.vercel.app/api/top-langs/?username=lucatronlk&layout=compact' -o profile/top-langs.svg.tmp
+          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 --silent --show-error \
+            'https://streak-stats.demolab.com/?user=lucatronlk' -o profile/streak.svg.tmp
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          import re
+
+          namespace = '{http://www.w3.org/2000/svg}'
+          allowed = {'svg', 'title', 'desc', 'style', 'rect', 'g', 'text', 'tspan', 'path',
+                     'circle', 'line', 'defs', 'clipPath', 'mask', 'ellipse', 'polygon',
+                     'polyline', 'linearGradient', 'radialGradient', 'stop'}
+          local_url = re.compile(r'url\(#[A-Za-z_][\w.-]*\)')
+          required = {
+              'stats': 'GitHub Stats',
+              'top-langs': 'Most Used Languages',
+              'streak': 'Current Streak',
+          }
+          for name in ('stats', 'top-langs', 'streak'):
+              temp = Path('profile') / f'{name}.svg.tmp'
+              data = temp.read_bytes()
+              if not 100 < len(data) < 300_000 or b'<!DOCTYPE' in data.upper() or b'<!ENTITY' in data.upper():
+                  raise ValueError(f'{name}: invalid SVG size or DTD')
+              root = ET.fromstring(data)
+              if root.tag != namespace + 'svg':
+                  raise ValueError(f'{name}: not an SVG')
+              if required[name].lower() not in ''.join(root.itertext()).lower():
+                  raise ValueError(f'{name}: unexpected card content')
+              for element in root.iter():
+                  if element.tag != namespace + element.tag.rsplit('}', 1)[-1]:
+                      raise ValueError(f'{name}: foreign namespace')
+                  tag = element.tag.rsplit('}', 1)[-1]
+                  if tag not in allowed:
+                      raise ValueError(f'{name}: disallowed element {tag}')
+                  for key, value in element.attrib.items():
+                      if key.startswith('{') and not key.startswith(namespace):
+                          raise ValueError(f'{name}: foreign attribute namespace')
+                      attr = key.rsplit('}', 1)[-1].lower()
+                      if attr.startswith('on') or attr in ('href', 'src'):
+                          raise ValueError(f'{name}: disallowed attribute {attr}')
+                      if 'javascript:' in value.lower() or 'data:' in value.lower():
+                          raise ValueError(f'{name}: disallowed URI')
+                      if 'url(' in value.lower() and 'url(' in local_url.sub('', value).lower():
+                          raise ValueError(f'{name}: nonlocal URL')
+                  if tag == 'style' and element.text:
+                      css = element.text.lower()
+                      if '@import' in css or 'url(' in local_url.sub('', css):
+                          raise ValueError(f'{name}: external stylesheet reference')
+              temp.replace(temp.with_suffix(''))
+          PY
+
+      - name: Publish only the three profile cards
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = main
+          git add -- profile/stats.svg profile/top-langs.svg profile/streak.svg
+          if git diff --cached --quiet; then
+            echo 'Cards unchanged'
+            exit 0
+          fi
+          test -s profile/stats.svg && test -s profile/top-langs.svg && test -s profile/streak.svg
+          if git diff --cached --name-only | grep -Ev '^profile/(stats|top-langs|streak)\.svg$'; then
+            echo 'Refusing to publish out-of-scope files' >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: refresh profile cards'
+          auth="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          export GIT_CONFIG_COUNT=1
+          export GIT_CONFIG_KEY_0='http.https://github.com/.extraheader'
+          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $auth"
+          git push origin HEAD:main

@@ -1,0 +1,11 @@
+# Copied upstream workflow; disabled because project sources are absent.
+name: Disabled upstream update-langs
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  disabled:
+    if: false
+    runs-on: [ares, linux, x64]
+    steps:
+      - run: ':'

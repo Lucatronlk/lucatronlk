@@ -1,0 +1,3 @@
+# Profile automation changes should be reviewed by the profile owner.
+/.github/workflows/ @Lucatronlk
+/.github/dependabot.yml @Lucatronlk

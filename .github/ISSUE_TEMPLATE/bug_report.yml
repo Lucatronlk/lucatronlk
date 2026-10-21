@@ -1,0 +1,6 @@
+name: Disabled upstream bug template
+description: Copied from unrelated upstream app; do not use.
+body:
+  - type: markdown
+    attributes:
+      value: This template belongs to an unrelated upstream app. Please open a blank issue instead.

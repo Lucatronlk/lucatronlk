@@ -1,0 +1,11 @@
+# Copied from unrelated upstream project; intentionally inert.
+name: Disabled upstream labeler
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  disabled:
+    if: false
+    runs-on: [ares, linux, x64]
+    steps:
+      - run: ':'
