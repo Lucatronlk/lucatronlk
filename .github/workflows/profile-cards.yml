@@ -25,17 +25,44 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Fetch and validate public SVG cards
+      - name: Require a private-stats token
         shell: bash
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: |
+          if [ -z "$PROFILE_STATS_TOKEN" ]; then
+            echo 'Set the PROFILE_STATS_TOKEN Actions secret to a token authorized to read the intended private repositories.' >&2
+            exit 1
+          fi
+
+      - name: Generate dark stats card with private contributions
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=lucatronlk&show_icons=true&theme=dark
+          path: profile/stats.svg.tmp
+          core_version: '' # Use action's bundled, lockfile-pinned core; avoid runtime version resolution.
+          fail_on_error: 'true'
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      - name: Generate dark languages card including private repositories
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: top-langs
+          options: username=lucatronlk&layout=compact&theme=dark
+          path: profile/top-langs.svg.tmp
+          core_version: '' # Use action's bundled, lockfile-pinned core; avoid runtime version resolution.
+          fail_on_error: 'true'
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      - name: Generate private-contribution streak and validate all SVGs
+        shell: bash
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: |
           set -euo pipefail
           mkdir -p profile
-          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 --silent --show-error \
-            'https://github-readme-stats.vercel.app/api?username=lucatronlk&show_icons=true' -o profile/stats.svg.tmp
-          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 --silent --show-error \
-            'https://github-readme-stats.vercel.app/api/top-langs/?username=lucatronlk&layout=compact' -o profile/top-langs.svg.tmp
-          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 --silent --show-error \
-            'https://streak-stats.demolab.com/?user=lucatronlk' -o profile/streak.svg.tmp
+          python3 .github/scripts/profile-streak.py
           python3 - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET
