@@ -1,19 +1,8 @@
-![JustSec — Luca's security engineering portfolio](./assets/justsec-profile-banner.svg)
+# Hello there, I’m Luca 👋
 
-<div align="center">
+### Security Engineer · DevSecOps · Cloud Security · Platform Engineering · Building secure systems — not just CI/CD pipelines.
 
-### Hello there, I’m Luca 👋
-
-**Security Engineer · DevSecOps · Cloud Security · Platform Engineering**
-
-`// Building secure systems — not just CI/CD pipelines.`
-
-**[GitHub Stats](#-github-stats) · [Homelab](#-homelab) · [Tech Stack](#-technologies) · [Repositories I've Starred](#-repositories-ive-starred)**
-
-</div>
-
-> **Welcome to the dark side. We have root access.**  
-> **No shortcuts — Just security.**
+> **Welcome to the dark side. We have root access.**
 
 I’m a Security Engineer focused on **cloud infrastructure security, DevSecOps, platform security, security automation, and observability** across Azure and AWS environments.
 
@@ -30,10 +19,10 @@ My goal is simple:
 | | |
 |---|---|
 | 🛡️ **Security** | Cloud Security · DevSecOps · Infrastructure Security · IAM · Detection & Response |
-| ☁️ **Cloud & Platform** | Azure · AWS · Kubernetes · Docker · Docker Compose · Terraform |
+| ☁️ **Cloud & Platform** | Azure · AWS · Kubernetes · Terraform |
 | 🔐 **Security Engineering** | Secrets Management · Least Privilege · Policy-as-Code · Security Guardrails |
 | 🚚 **Software Delivery** | Secure CI/CD · Supply Chain Security · Artifact Security · Reusable Workflows |
-| ⚙️ **Automation** | Python · Bash · PowerShell · YAML · Dockerfile · Infrastructure & Security Automation |
+| ⚙️ **Automation** | Python · Bash · PowerShell · Infrastructure & Security Automation |
 | 📊 **Observability** | Splunk · ELK · Datadog · Prometheus · Grafana · Loki · Wazuh |
 | 🌐 **Networking & Ingress** | Tailscale · Caddy · Private DNS · Cloudflare DNS-01 |
 | 🤖 **AI Security** | Local LLMs · AI Gateways · Agent Governance · Shared Skills · Guardrails |
@@ -47,8 +36,6 @@ I am a really curious guy, I like understanding **why systems are designed the w
 ## 🏗️ Projects
 
 ### 🧪 Homelab
-
-![JustSec private homelab fleet — Cronus, Athena, Ares, Argus and Apollo](./assets/justsec-homelab.svg)
 
 My homelab is where a lot of curiosity turns into actual engineering.
 
@@ -70,7 +57,7 @@ Internal services are exposed through **Caddy**, which acts as the reverse-proxy
 | **Argus** | Edge Node & Self-hosted AI Platform | 🟢 Active |
 | **Apollo** | Storage & Media Infrastructure | 🟢 Active |
 | **`_agent-shared`** | AI DevSecOps Agent Governance Platform | 🟢 Active |
-| **Windows GPU Worker** | On-demand AI Compute | 🟡 On-demand |
+| **Windows GPU Worker** | On-demand AI Compute | NVIDIA RTX GPU · local inference workloads · centralized logs and metrics |
 
 ## 📊 Cronus — Security & Observability Platform
 
@@ -610,11 +597,9 @@ And occasionally they become all three.
 
 ## ⚙️ Technologies
 
-![JustSec engineering stack — Azure, AWS, Docker, Kubernetes, DevSecOps and observability](./assets/justsec-stack.svg)
-
 ### ☁️ Cloud & Infrastructure
 
-`Azure` · `AWS` · `Kubernetes` · **`Docker`** · **`Docker Compose`** · `Dockerfile` · `Helm` · `Terraform` · `Linux` · `Tailscale` · `Caddy`
+`Azure` · `AWS` · `Kubernetes` · `Docker` · `Terraform` · `Linux` · `Tailscale` · `Caddy`
 
 ### 🔐 Security Engineering
 
@@ -626,7 +611,7 @@ And occasionally they become all three.
 
 ### ⚙️ Automation
 
-`Python` · `Bash` · `PowerShell` · `YAML` · `GitHub Actions`
+`Python` · `Bash` · `PowerShell`
 
 ### 📊 Observability
 
@@ -646,43 +631,19 @@ And occasionally they become all three.
 
 <div align="center">
 
-![JustSec GitHub Stats: all-time commits, reviews, merged pull requests, and contributions](./profile/stats.svg)
+![GitHub Stats](./profile/stats.svg)
 
-![Top eight GitHub languages, excluding JavaScript](./profile/top-langs.svg)
+![Most Used Languages](./profile/top-langs.svg)
 
-![GitHub total contributions, current streak and longest streak](./profile/streak.svg)
+![GitHub Streak](./profile/streak.svg)
 
 </div>
 
 <sub>
-Updated daily at **05:37 UTC** by GitHub Actions, with a manual-run option.
-These three validated SVG files are committed to the repository, so visitors
-do not need to fetch live statistics from third-party card services.
-Stats include accessible private activity without exposing private repository names.
-JavaScript is excluded from the language card; YAML and Dockerfile are displayed
-when GitHub Linguist detects enough of them to place in the top eight.
+Updated daily by GitHub Actions. Statistics are generated
+and committed to this repository, avoiding external API
+calls when visitors open the profile.
 </sub>
-
----
-
-## ⭐ Repositories I've Starred
-
-These are **public repositories I've starred on GitHub** — projects I follow, learn from, or want to revisit. This list is refreshed by the same daily workflow as the stats cards.
-
-**[Browse everything I've starred on GitHub](https://github.com/Lucatronlk?tab=stars)**
-
-<!-- JUSTSEC_STARRED_START -->
-| Repository | Description | Language |
-| :--- | :--- | :--- |
-| [deskflow/homebrew-tap](https://github.com/deskflow/homebrew-tap) | A Homebrew tap for Deskflow | Ruby |
-| [InukaAsith/homebrew-twindesk](https://github.com/InukaAsith/homebrew-twindesk) | Homebrew tap for TwinDesk: brew install --cask inukaasith/twindesk/twindesk | Ruby |
-| [nicotsx/zerobyte](https://github.com/nicotsx/zerobyte) | Backup automation for self-hosters. Built on top of restic | TypeScript |
-| [haydenschmitty/floorplan](https://github.com/haydenschmitty/floorplan) | See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex. | JavaScript |
-| [everywall/ladder](https://github.com/everywall/ladder) | Selfhosted alternative to 12ft.io. and 1ft.io. Proxy to remove CORS headers and modify HTML | Go |
-| [getopenscreen/openscreen](https://github.com/getopenscreen/openscreen) | Record your screen, ship a demo. Free and open-source, GPU-accelerated, no watermarks, no subscriptions. Windows, macOS, Linu | TypeScript |
-| [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need | TypeScript |
-| [Edge0-AI/Edge0](https://github.com/Edge0-AI/Edge0) | Run 35B MoE models in ~2.5 GB of RAM. Weights stream from SSD; a trained router predicts loads a step ahead. Mac, iPhone, And | Python |
-<!-- JUSTSEC_STARRED_END -->
 
 ---
 
@@ -700,6 +661,7 @@ It’s to understand and demonstrate **how secure systems are put together**.
 
 ---
 
-![JustSec — No fluff. No shortcuts. Just security.](./assets/justsec-footer.svg)
-
-<p align="center"><sub>Always learning. Always building. Usually automating something that started as a manual task.</sub></p>
+<p align="center">
+  <strong>May the source be with you.</strong><br/>
+  <sub>Always learning. Always building. Usually automating something that started as a manual task.</sub>
+</p>
