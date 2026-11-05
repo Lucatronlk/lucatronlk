@@ -672,7 +672,16 @@ These are **public repositories I've starred on GitHub** — projects I follow, 
 **[Browse everything I've starred on GitHub](https://github.com/Lucatronlk?tab=stars)**
 
 <!-- JUSTSEC_STARRED_START -->
-_The most recently starred public repositories will appear here after the next workflow run._
+| Repository | Description | Language |
+| :--- | :--- | :--- |
+| [deskflow/homebrew-tap](https://github.com/deskflow/homebrew-tap) | A Homebrew tap for Deskflow | Ruby |
+| [InukaAsith/homebrew-twindesk](https://github.com/InukaAsith/homebrew-twindesk) | Homebrew tap for TwinDesk: brew install --cask inukaasith/twindesk/twindesk | Ruby |
+| [nicotsx/zerobyte](https://github.com/nicotsx/zerobyte) | Backup automation for self-hosters. Built on top of restic | TypeScript |
+| [haydenschmitty/floorplan](https://github.com/haydenschmitty/floorplan) | See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex. | JavaScript |
+| [everywall/ladder](https://github.com/everywall/ladder) | Selfhosted alternative to 12ft.io. and 1ft.io. Proxy to remove CORS headers and modify HTML | Go |
+| [getopenscreen/openscreen](https://github.com/getopenscreen/openscreen) | Record your screen, ship a demo. Free and open-source, GPU-accelerated, no watermarks, no subscriptions. Windows, macOS, Linu | TypeScript |
+| [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need | TypeScript |
+| [Edge0-AI/Edge0](https://github.com/Edge0-AI/Edge0) | Run 35B MoE models in ~2.5 GB of RAM. Weights stream from SSD; a trained router predicts loads a step ahead. Mac, iPhone, And | Python |
 <!-- JUSTSEC_STARRED_END -->
 
 ---
