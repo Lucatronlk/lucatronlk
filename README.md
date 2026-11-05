@@ -629,29 +629,20 @@ And occasionally they become all three.
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img
-    src="./profile/stats.svg"
-    height="170"
-    alt="Luca's GitHub Stats"
-  />
-  <img
-    src="./profile/top-langs.svg"
-    height="170"
-    alt="Most Used Languages"
-  />
-</p>
+<div align="center">
 
-<p align="center">
-  <img
-    src="./profile/streak.svg"
-    alt="GitHub Contribution Streak"
-  />
-</p>
+![GitHub Stats](./profile/stats.svg)
 
-<p align="center">
-  <sub>Generated automatically using GitHub Actions.</sub>
-</p>
+![Most Used Languages](./profile/top-langs.svg)
+
+![GitHub Streak](./profile/streak.svg)
+
+</div>
+
+<sub>
+Generated daily by GitHub Actions and committed to this repository.
+No external statistics service is required when viewing this profile.
+</sub>
 
 ---
 
