@@ -1,61 +1,153 @@
-name: Update GitHub Profile Stats
+name: Refresh JustSec profile cards
 
 on:
   schedule:
-    - cron: "17 6 * * *"
+    - cron: '37 5 * * *' # Daily at 05:37 UTC
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/readme-cards.yml"
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: readme-cards
+  group: justsec-profile-cards
   cancel-in-progress: false
 
 env:
-  THEME: "theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=1F6FEB&text_color=C9D1D9"
+  # JustSec / JustCode brand palette:
+  # Night #0A0F1C, cyan #00D5FF, blue #3B82F6,
+  # violet #8B5CF6, magenta #EC4899, white #F8FAFC.
+  THEME: 'theme=dark&hide_border=true&bg_color=0A0F1C&title_color=00D5FF&icon_color=8B5CF6&text_color=F8FAFC&disable_animations=true'
 
 jobs:
-  generate:
-    runs-on: ubuntu-latest
+  refresh:
+    if: github.repository == 'Lucatronlk/lucatronlk' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Check out default branch without persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-      - name: Generate GitHub Stats
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e
+      - name: Require private contribution access
+        shell: bash
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: |
+          if [ -z "$PROFILE_STATS_TOKEN" ]; then
+            echo 'Missing PROFILE_STATS_TOKEN Actions secret.' >&2
+            exit 1
+          fi
+
+      - name: Generate enhanced GitHub stats
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: "username=Lucatronlk&show_icons=true&include_all_commits=true&hide_rank=true&number_format=short&${{ env.THEME }}"
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
+          options: 'username=lucatronlk&show_icons=true&include_all_commits=true&hide_rank=true&number_format=short&show=contributions,reviews,prs_merged&${{ env.THEME }}'
+          path: profile/stats.svg.tmp
+          core_version: '' # Use the core bundled with this pinned action revision.
+          fail_on_error: 'true'
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
-      - name: Generate Languages
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e
+      - name: Generate top eight languages
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: "username=Lucatronlk&layout=compact&langs_count=8&${{ env.THEME }}"
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
+          options: 'username=lucatronlk&layout=compact&langs_count=8&${{ env.THEME }}'
+          path: profile/top-langs.svg.tmp
+          core_version: ''
+          fail_on_error: 'true'
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
-      - name: Generate Streak
-        uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077
+      - name: Generate full-history streak, including accessible private activity
+        uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077 # v1.7.0
         with:
-          options: "user=Lucatronlk&hide_border=true&disable_animations=true&background=0D1117&stroke=30363D&ring=58A6FF&fire=FF6B6B&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=58A6FF&sideLabels=58A6FF&dates=8B949E&timezone=Europe/Bucharest"
-          path: profile/streak.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          options: 'user=lucatronlk&hide_border=true&disable_animations=true&background=0A0F1C&stroke=283247&ring=3B82F6&fire=EC4899&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=00D5FF&sideLabels=8B5CF6&dates=94A3B8&timezone=Europe/Bucharest&short_numbers=true'
+          path: profile/streak.svg.tmp
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
-      - name: Commit updated cards
+      - name: Validate generated SVGs before publishing
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A profile/
-          git diff --staged --quiet && exit 0
-          git commit -m "chore: update GitHub stats"
-          git push
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+
+          ns = '{http://www.w3.org/2000/svg}'
+          allowed = {
+              'svg', 'title', 'desc', 'style', 'rect', 'g', 'text', 'tspan',
+              'path', 'circle', 'line', 'defs', 'clipPath', 'mask', 'ellipse',
+              'polygon', 'polyline', 'linearGradient', 'radialGradient', 'stop',
+          }
+          local_url = re.compile(r'url\(#[A-Za-z_][\w.-]*\)', re.I)
+          required = {
+              'stats': 'GitHub Stats',
+              'top-langs': 'Most Used Languages',
+              'streak': 'Current Streak',
+          }
+
+          for name, heading in required.items():
+              temp = Path('profile') / f'{name}.svg.tmp'
+              data = temp.read_bytes()
+              if not 100 < len(data) < 300_000:
+                  raise ValueError(f'{name}: unexpected SVG size')
+              upper = data.upper()
+              if b'<!DOCTYPE' in upper or b'<!ENTITY' in upper:
+                  raise ValueError(f'{name}: DTD and entities are forbidden')
+              root = ET.fromstring(data)
+              if root.tag != ns + 'svg':
+                  raise ValueError(f'{name}: invalid SVG root')
+              if heading.casefold() not in ''.join(root.itertext()).casefold():
+                  raise ValueError(f'{name}: expected title not found')
+              for element in root.iter():
+                  tag = element.tag.removeprefix(ns)
+                  if element.tag != ns + tag or tag not in allowed:
+                      raise ValueError(f'{name}: disallowed element {element.tag}')
+                  for key, value in element.attrib.items():
+                      if key.startswith('{') and not key.startswith(ns):
+                          raise ValueError(f'{name}: foreign attribute namespace')
+                      attr = key.rsplit('}', 1)[-1].lower()
+                      if attr.startswith('on') or attr in {'href', 'src'}:
+                          raise ValueError(f'{name}: disallowed attribute {attr}')
+                      lower = value.lower()
+                      if 'javascript:' in lower or 'data:' in lower:
+                          raise ValueError(f'{name}: forbidden URI')
+                      if 'url(' in local_url.sub('', lower):
+                          raise ValueError(f'{name}: nonlocal URL reference')
+                  if tag == 'style' and element.text:
+                      css = element.text.lower()
+                      if '@import' in css or 'url(' in local_url.sub('', css):
+                          raise ValueError(f'{name}: external CSS reference')
+              temp.replace(Path('profile') / f'{name}.svg')
+              print(f'{name}: validated')
+          PY
+
+      - name: Publish only the three profile cards
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = main
+          git add -- profile/stats.svg profile/top-langs.svg profile/streak.svg
+          if git diff --cached --quiet; then
+            echo 'Cards unchanged'
+            exit 0
+          fi
+          if git diff --cached --name-only | grep -Ev '^profile/(stats|top-langs|streak)\.svg$'; then
+            echo 'Refusing to commit out-of-scope files' >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: refresh JustSec profile cards'
+          auth="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          export GIT_CONFIG_COUNT=1
+          export GIT_CONFIG_KEY_0='http.https://github.com/.extraheader'
+          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $auth"
+          git push origin HEAD:main
