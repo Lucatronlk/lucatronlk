@@ -640,8 +640,9 @@ And occasionally they become all three.
 </div>
 
 <sub>
-Generated daily by GitHub Actions and committed to this repository.
-No external statistics service is required when viewing this profile.
+Updated daily by GitHub Actions. Statistics are generated
+and committed to this repository, avoiding external API
+calls when visitors open the profile.
 </sub>
 
 ---
