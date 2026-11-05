@@ -56,7 +56,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: 'username=lucatronlk&layout=compact&langs_count=8&${{ env.THEME }}'
+          options: 'username=lucatronlk&layout=compact&langs_count=8&hide=javascript&${{ env.THEME }}'
           path: profile/top-langs.svg.tmp
           core_version: ''
           fail_on_error: 'true'
@@ -68,6 +68,13 @@ jobs:
           options: 'user=lucatronlk&hide_border=true&disable_animations=true&background=0A0F1C&stroke=283247&ring=3B82F6&fire=EC4899&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=00D5FF&sideLabels=8B5CF6&dates=94A3B8&timezone=Europe/Bucharest&short_numbers=true'
           path: profile/streak.svg.tmp
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      - name: Refresh public repositories starred by Luca
+        # If the public API is temporarily unavailable, retain the previous
+        # curated list while still publishing freshly generated stats cards.
+        shell: bash
+        continue-on-error: true
+        run: python3 .github/scripts/update-starred-repos.py
 
       - name: Validate generated SVGs before publishing
         shell: bash
@@ -127,25 +134,25 @@ jobs:
               print(f'{name}: validated')
           PY
 
-      - name: Publish only the three profile cards
+      - name: Publish three profile cards and the public starred list
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           test "$(git branch --show-current)" = main
-          git add -- profile/stats.svg profile/top-langs.svg profile/streak.svg
+          git add -- profile/stats.svg profile/top-langs.svg profile/streak.svg README.md
           if git diff --cached --quiet; then
-            echo 'Cards unchanged'
+            echo 'Cards and public starred list unchanged'
             exit 0
           fi
-          if git diff --cached --name-only | grep -Ev '^profile/(stats|top-langs|streak)\.svg$'; then
+          if git diff --cached --name-only | grep -Ev '^(README\.md|profile/(stats|top-langs|streak)\.svg)$'; then
             echo 'Refusing to commit out-of-scope files' >&2
             exit 1
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'chore: refresh JustSec profile cards'
+          git commit -m 'chore: refresh JustSec profile cards and public stars'
           auth="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
           export GIT_CONFIG_COUNT=1
           export GIT_CONFIG_KEY_0='http.https://github.com/.extraheader'
