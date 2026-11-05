@@ -1,8 +1,19 @@
-# Hello there, I’m Luca 👋
+![JustSec — Luca's security engineering portfolio](./assets/justsec-profile-banner.svg)
 
-### Security Engineer · DevSecOps · Cloud Security · Platform Engineering · Building secure systems — not just CI/CD pipelines.
+<div align="center">
 
-> **Welcome to the dark side. We have root access.**
+### Hello there, I’m Luca 👋
+
+**Security Engineer · DevSecOps · Cloud Security · Platform Engineering**
+
+`// Building secure systems — not just CI/CD pipelines.`
+
+**[GitHub Stats](#-github-stats) · [Homelab](#-homelab) · [Tech Stack](#-technologies) · [Repositories I've Starred](#-repositories-ive-starred)**
+
+</div>
+
+> **Welcome to the dark side. We have root access.**  
+> **No shortcuts — Just security.**
 
 I’m a Security Engineer focused on **cloud infrastructure security, DevSecOps, platform security, security automation, and observability** across Azure and AWS environments.
 
@@ -19,10 +30,10 @@ My goal is simple:
 | | |
 |---|---|
 | 🛡️ **Security** | Cloud Security · DevSecOps · Infrastructure Security · IAM · Detection & Response |
-| ☁️ **Cloud & Platform** | Azure · AWS · Kubernetes · Terraform |
+| ☁️ **Cloud & Platform** | Azure · AWS · Kubernetes · Docker · Docker Compose · Terraform |
 | 🔐 **Security Engineering** | Secrets Management · Least Privilege · Policy-as-Code · Security Guardrails |
 | 🚚 **Software Delivery** | Secure CI/CD · Supply Chain Security · Artifact Security · Reusable Workflows |
-| ⚙️ **Automation** | Python · Bash · PowerShell · Infrastructure & Security Automation |
+| ⚙️ **Automation** | Python · Bash · PowerShell · YAML · Dockerfile · Infrastructure & Security Automation |
 | 📊 **Observability** | Splunk · ELK · Datadog · Prometheus · Grafana · Loki · Wazuh |
 | 🌐 **Networking & Ingress** | Tailscale · Caddy · Private DNS · Cloudflare DNS-01 |
 | 🤖 **AI Security** | Local LLMs · AI Gateways · Agent Governance · Shared Skills · Guardrails |
@@ -36,6 +47,8 @@ I am a really curious guy, I like understanding **why systems are designed the w
 ## 🏗️ Projects
 
 ### 🧪 Homelab
+
+![JustSec private homelab fleet — Cronus, Athena, Ares, Argus and Apollo](./assets/justsec-homelab.svg)
 
 My homelab is where a lot of curiosity turns into actual engineering.
 
@@ -57,7 +70,7 @@ Internal services are exposed through **Caddy**, which acts as the reverse-proxy
 | **Argus** | Edge Node & Self-hosted AI Platform | 🟢 Active |
 | **Apollo** | Storage & Media Infrastructure | 🟢 Active |
 | **`_agent-shared`** | AI DevSecOps Agent Governance Platform | 🟢 Active |
-| **Windows GPU Worker** | On-demand AI Compute | NVIDIA RTX GPU · local inference workloads · centralized logs and metrics |
+| **Windows GPU Worker** | On-demand AI Compute | 🟡 On-demand |
 
 ## 📊 Cronus — Security & Observability Platform
 
@@ -597,9 +610,11 @@ And occasionally they become all three.
 
 ## ⚙️ Technologies
 
+![JustSec engineering stack — Azure, AWS, Docker, Kubernetes, DevSecOps and observability](./assets/justsec-stack.svg)
+
 ### ☁️ Cloud & Infrastructure
 
-`Azure` · `AWS` · `Kubernetes` · `Docker` · `Terraform` · `Linux` · `Tailscale` · `Caddy`
+`Azure` · `AWS` · `Kubernetes` · **`Docker`** · **`Docker Compose`** · `Dockerfile` · `Helm` · `Terraform` · `Linux` · `Tailscale` · `Caddy`
 
 ### 🔐 Security Engineering
 
@@ -611,7 +626,7 @@ And occasionally they become all three.
 
 ### ⚙️ Automation
 
-`Python` · `Bash` · `PowerShell`
+`Python` · `Bash` · `PowerShell` · `YAML` · `GitHub Actions`
 
 ### 📊 Observability
 
@@ -631,19 +646,34 @@ And occasionally they become all three.
 
 <div align="center">
 
-![GitHub Stats](./profile/stats.svg)
+![JustSec GitHub Stats: all-time commits, reviews, merged pull requests, and contributions](./profile/stats.svg)
 
-![Most Used Languages](./profile/top-langs.svg)
+![Top eight GitHub languages, excluding JavaScript](./profile/top-langs.svg)
 
-![GitHub Streak](./profile/streak.svg)
+![GitHub total contributions, current streak and longest streak](./profile/streak.svg)
 
 </div>
 
 <sub>
-Updated daily by GitHub Actions. Statistics are generated
-and committed to this repository, avoiding external API
-calls when visitors open the profile.
+Updated daily at **05:37 UTC** by GitHub Actions, with a manual-run option.
+These three validated SVG files are committed to the repository, so visitors
+do not need to fetch live statistics from third-party card services.
+Stats include accessible private activity without exposing private repository names.
+JavaScript is excluded from the language card; YAML and Dockerfile are displayed
+when GitHub Linguist detects enough of them to place in the top eight.
 </sub>
+
+---
+
+## ⭐ Repositories I've Starred
+
+These are **public repositories I've starred on GitHub** — projects I follow, learn from, or want to revisit. This list is refreshed by the same daily workflow as the stats cards.
+
+**[Browse everything I've starred on GitHub](https://github.com/Lucatronlk?tab=stars)**
+
+<!-- JUSTSEC_STARRED_START -->
+_The most recently starred public repositories will appear here after the next workflow run._
+<!-- JUSTSEC_STARRED_END -->
 
 ---
 
@@ -661,7 +691,6 @@ It’s to understand and demonstrate **how secure systems are put together**.
 
 ---
 
-<p align="center">
-  <strong>May the source be with you.</strong><br/>
-  <sub>Always learning. Always building. Usually automating something that started as a manual task.</sub>
-</p>
+![JustSec — No fluff. No shortcuts. Just security.](./assets/justsec-footer.svg)
+
+<p align="center"><sub>Always learning. Always building. Usually automating something that started as a manual task.</sub></p>
