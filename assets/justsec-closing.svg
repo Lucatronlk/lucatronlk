@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="132" viewBox="0 0 1200 132" role="img" aria-labelledby="title desc">
+  <title id="title">How secure systems are put together</title>
+  <desc id="desc">The goal is not to demonstrate that individual tools can be configured. It is to understand and demonstrate how secure systems are put together.</desc>
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00E5FF"/><stop offset=".45" stop-color="#3882F6"/><stop offset=".75" stop-color="#885CFF"/><stop offset="1" stop-color="#D946EF"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/><stop offset=".5" stop-color="#885CFF"/><stop offset="1" stop-color="#D946EF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="132" rx="16" fill="#0A0F1C"/>
+  <rect x="0" y="0" width="4" height="132" rx="2" fill="url(#bar)"/>
+  <g font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+    <text x="48" y="52" font-size="20" font-weight="500" fill="#9BAAC1">The goal isn’t to demonstrate that I can configure individual tools.</text>
+    <text x="48" y="94" font-size="22" font-weight="700" fill="#F4F7FF">It’s to understand and demonstrate <tspan font-weight="800" fill="url(#text)">how secure systems are put together</tspan>.</text>
+  </g>
+</svg>

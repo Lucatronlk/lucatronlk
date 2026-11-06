@@ -37,7 +37,7 @@
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/compass.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">At a Glance</span>
 
@@ -54,9 +54,11 @@
 | <img src="assets/icons/flask.svg" width="18" height="18" alt="" /> **Homelab** | Multi-server security lab with zero-trust networking, centralized secrets, observability, network detection and local AI |
 | <img src="assets/icons/build-code.svg" width="18" height="18" alt="" /> **Currently Building** | A public security engineering portfolio spanning cloud → CI/CD → supply chain → runtime → detection → AI |
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/blocks.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Projects</span>
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### <img src="assets/icons/shield.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Just Security</span>
 
@@ -84,6 +86,8 @@ Just Security is a collection of hands-on security engineering projects focused 
 - [**justsec-azure-platform-landing-zone**](https://github.com/Lucatronlk/justsec-azure-platform-landing-zone) — enterprise-style Azure foundation based on Cloud Adoption Framework and landing-zone principles
 - [**justsec-secure-supply-chain**](https://github.com/Lucatronlk/justsec-secure-supply-chain) — security controls covering the lifecycle of software artifacts
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/flask.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Homelab</span>
 
 My homelab is where a lot of curiosity turns into actual engineering.
@@ -96,6 +100,8 @@ Every server ships its logs and metrics to **Cronus** for centralized monitoring
 
 Internal services are exposed through **Caddy**, which acts as the reverse-proxy and TLS termination layer for the homelab. Combined with **Tailscale** and internal DNS resolution, this gives services consistent HTTPS endpoints without exposing administrative interfaces directly to the public internet.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ## <img src="assets/icons/server.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Infrastructure</span>
 
 | Project / Host | Role | Status |
@@ -107,6 +113,8 @@ Internal services are exposed through **Caddy**, which acts as the reverse-proxy
 | **Apollo** | Storage & Media Infrastructure | 🟢 Active |
 | **`justsec-agent-kit`** | AI DevSecOps Agent Governance Platform | 🟢 Active |
 | **Windows GPU Worker** | On-demand AI Compute | NVIDIA RTX GPU · local inference workloads · centralized logs and metrics |
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/pulse.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Cronus — Security & Observability Platform</span>
 
@@ -130,6 +138,8 @@ Individual capabilities can be enabled or disabled from the root layer without m
 
 That lets the same architecture scale from a relatively lean single-node deployment to a broader security operations platform.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### Live services
 
 Cronus currently brings together:
@@ -149,6 +159,8 @@ Additional capabilities are staged in the repository and can be promoted when ne
 The objective isn’t to run every security product at once.
 
 It’s to have a platform where capabilities can be introduced deliberately as the architecture evolves.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Security by design
 
@@ -181,7 +193,7 @@ logs and metrics shipped to Cronus
 centralized monitoring and alerting
 ```
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/radar.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Athena — Network Security & Telemetry</span>
 
@@ -190,6 +202,8 @@ centralized monitoring and alerting
 Its role is to collect and enrich network, host and security telemetry before forwarding it to the central observability platform on Cronus.
 
 Athena ships its logs and metrics to **Cronus**, and **fail2ban runs on the host as part of the standard security baseline**.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Network visibility
 
@@ -212,6 +226,8 @@ Network Traffic
             └── device discovery / presence
 ```
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### Logs & metrics
 
 `Vector` · `Promtail` · `Alloy`
@@ -226,6 +242,8 @@ ship logs and events toward Loki, while Prometheus exporters expose:
 Athena also includes operational tooling such as:
 
 `Portainer` · `Glances` · `Watchtower` · `fail2ban`
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Separation of responsibilities
 
@@ -257,7 +275,7 @@ Cronus handles centralized storage, dashboards, alerting and correlation.
 
 > **Resistance is futile. Your logs will be centralized.**
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/wrench.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Ares — Private Infrastructure-as-Code Platform</span>
 
@@ -272,6 +290,8 @@ Internal applications use **Caddy as the reverse-proxy layer**, giving services 
 The goal is to keep the environment production-shaped:
 
 > reproducible infrastructure, private-by-default networking, centralized observability, controlled secrets and clear operating conventions.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Compose-first architecture
 
@@ -292,6 +312,8 @@ Across the stack I try to keep the same conventions:
 - centralized logs and metrics shipped to Cronus
 - fail2ban enabled on the host
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### CI/CD & developer platform
 
 Ares includes:
@@ -306,6 +328,8 @@ That runner includes tooling for real engineering workloads:
 `Terraform` · `Vault` · `Node.js` · `Java` · `Playwright` · `JFrog CLI`
 
 This gives me a place to test CI/CD patterns, infrastructure automation and security controls on my own hardware.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Observability separation
 
@@ -335,6 +359,8 @@ Prom   Loki  Grafana
 
 I prefer keeping workload and observability hosts separate so telemetry has an independent home.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### Internal services
 
 Ares also hosts:
@@ -344,6 +370,8 @@ Ares also hosts:
 - internal development tools
 - management services
 - automation workloads
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### AI-assisted operations
 
@@ -360,6 +388,8 @@ Secrets and destructive actions remain **human-gated**.
 
 Repository-local guidance such as `AGENTS.md` and per-folder operating documentation defines how humans and AI agents are expected to work safely in the environment.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ## <img src="assets/icons/eye.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Argus — Homelab Edge & AI Node</span>
 
 **Argus** is a self-hosted Debian edge node running a single-node Docker Compose stack for **observability, edge services and self-hosted AI**.
@@ -367,6 +397,8 @@ Repository-local guidance such as `AGENTS.md` and per-folder operating documenta
 The stack uses one external `tailnet` network, with host-level **Caddy acting as the reverse proxy and TLS termination layer**.
 
 Argus ships its logs and metrics to **Cronus**, and **fail2ban runs on the host** as part of the standard security baseline.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Telemetry
 
@@ -379,11 +411,15 @@ Argus exports:
 
 into the wider Prometheus/Grafana environment over the tailnet.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### Logging
 
 `Vector` and `Promtail` ship host and Docker logs to Loki.
 
 IDS feeds from Suricata and Zeek are normalized for a Wazuh agent, allowing network and host security events to participate in the broader detection pipeline.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### AI services
 
@@ -392,6 +428,8 @@ Argus runs:
 `Open WebUI` · `OmniRoute` · `Redis` · `Ollama`
 
 OmniRoute acts as an AI gateway and routes requests toward local inference endpoints.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### Hardened by default
 
@@ -406,6 +444,8 @@ Security controls include:
 - fail2ban
 - reviewed container images
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### Private networking, reverse proxy & ingress
 
 Argus uses:
@@ -419,11 +459,13 @@ Caddy gives internal applications stable HTTPS endpoints while the underlying se
 
 Administrative services remain private.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### AI-agent ready
 
 Argus also consumes the shared `justsec-agent-kit` governance layer so coding agents operate under the same safety rules used across infrastructure repositories.
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/brain.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">`justsec-agent-kit` — AI DevSecOps Agent Platform</span>
 
@@ -445,6 +487,8 @@ Skills
 Agents
 ```
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/doc.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Policy</span>
 
 A single operating policy defines the baseline behavior expected from every agent:
@@ -458,11 +502,15 @@ A single operating policy defines the baseline behavior expected from every agen
 - secrets never read or printed
 - destructive actions remain human-gated
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/grid.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Domain standards</span>
 
 The platform includes **24 always-on instruction standards** covering:
 
 `Azure` · `AWS` · `Terraform` · `Kubernetes` · `Docker` · `GitHub Actions` · `GitLab CI` · `Python` · `TypeScript` · `Security` · `Migrations` · `AI Agent Safety`
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### <img src="assets/icons/toolbox.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Shared skills</span>
 
@@ -482,6 +530,8 @@ Domains include:
 
 Skills live once and are shared across agents rather than duplicated into individual personas.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/robot.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Domain agents</span>
 
 Seven domain agents consume curated skill allow-lists:
@@ -495,6 +545,8 @@ The model is deny-by-default:
 ```
 
 Agents only receive access to explicitly assigned skills.
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### <img src="assets/icons/shield.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Safety as the product</span>
 
@@ -512,6 +564,8 @@ The goal isn’t to make agents maximally autonomous.
 
 It’s to make them **predictable enough to trust with real infrastructure repositories**.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/seal.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Provenance & governance</span>
 
 The repository tracks:
@@ -524,6 +578,8 @@ The repository tracks:
 
 MCP servers, plugins and hooks are treated as **reviewed integration notes**, not silently bundled tooling.
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/plug.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Framework-agnostic by design</span>
 
 The content is plain Markdown with Agent-Skills-style frontmatter.
@@ -535,6 +591,8 @@ A sync layer exposes the same governance and skills to different agent framework
 And because coding alone is apparently no longer complicated enough:
 
 > **It’s dangerous to code alone. Take this AI.**
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/globe.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Zero-Trust Networking</span>
 
@@ -608,6 +666,8 @@ private service
 Tailscale / internal network
 ```
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ## <img src="assets/icons/sparkle.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Curiosity Drives a Lot of What I Build</span>
 
 A lot of what I know started with:
@@ -642,29 +702,41 @@ And occasionally they become all three.
 
 > **Resistance is futile. Your code will be refactored.**
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/layers.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Technologies</span>
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### <img src="assets/icons/layers.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Cloud & Infrastructure</span>
 
 `Azure` · `AWS` · `Kubernetes` · `Docker` · `Terraform` · `Linux` · `Tailscale` · `Caddy`
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/key.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Security Engineering</span>
 
 `HashiCorp Vault` · `Doppler` · `SonarQube` · `Artifactory` · `OPA` · `Wazuh` · `Suricata` · `Zeek` · `CrowdSec` · `fail2ban`
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### <img src="assets/icons/truck.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">CI/CD</span>
 
 `GitHub Actions` · `GitLab CI` · `Azure DevOps` · `Gitea Actions`
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/terminal.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Automation</span>
 
 `Python` · `Bash` · `PowerShell`
 
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
+
 ### <img src="assets/icons/chart.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Observability</span>
 
 `Splunk` · `ELK` · `Datadog` · `Prometheus` · `Grafana` · `Loki` · `Vector` · `Promtail` · `Alloy`
+
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ### <img src="assets/icons/robot.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">AI & Agent Engineering</span>
 
@@ -674,7 +746,7 @@ And occasionally they become all three.
 >
 > Understanding **architecture, identity, trust, failure modes and security boundaries** lasts considerably longer.
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/chart.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">GitHub Stats</span>
 
@@ -690,7 +762,7 @@ and committed to this repository, avoiding external API
 calls when visitors open the profile.
 </sub>
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/star.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Repositories I've Starred</span>
 
@@ -717,23 +789,26 @@ Public repositories I've starred and actually use.
 
 <!-- JUSTSEC_STARRED_END -->
 
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 ## <img src="assets/icons/rocket.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">What You’ll Find Here</span>
 
 This GitHub is becoming a practical collection of work around:
 
-**Cloud Security · DevSecOps · Platform Security · Secure CI/CD · Software Supply Chain · Detection Engineering · Observability · Security Automation · AI Security · Agent Governance**
+**<img src="assets/icons/layers.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Cloud Security &nbsp;·&nbsp; <img src="assets/icons/wrench.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;DevSecOps &nbsp;·&nbsp; <img src="assets/icons/server.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Platform Security &nbsp;·&nbsp; <img src="assets/icons/truck.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Secure CI/CD &nbsp;·&nbsp; <img src="assets/icons/seal.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Software Supply Chain &nbsp;·&nbsp; <img src="assets/icons/radar.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Detection Engineering &nbsp;·&nbsp; <img src="assets/icons/chart.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Observability &nbsp;·&nbsp; <img src="assets/icons/terminal.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Security Automation &nbsp;·&nbsp; <img src="assets/icons/robot.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;AI Security &nbsp;·&nbsp; <img src="assets/icons/brain.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Agent Governance**
 
-The goal isn’t to demonstrate that I can configure individual tools.
+<img src="assets/justsec-closing.svg" width="100%" alt="The goal isn’t to demonstrate that I can configure individual tools. It’s to understand and demonstrate how secure systems are put together." />
 
-It’s to understand and demonstrate **how secure systems are put together**.
-
-**Building secure systems — not just CI/CD pipelines**
-
----
+<img src="assets/divider.svg" width="100%" height="6" alt="" />
 
 <p align="center">
-  <strong>May the source be with you.</strong><br/>
-  <sub>Always learning. Always building. Usually automating something that started as a manual task.</sub>
+  <strong>Always learning. Always building.</strong><br/>
+</p>
+
+<p align="center">
+  <img src="assets/icons/shield.svg" width="18" height="18" alt="" style="vertical-align:middle" /> Security &nbsp;|&nbsp;
+  <img src="assets/icons/server.svg" width="18" height="18" alt="" style="vertical-align:middle" /> Linux &nbsp;|&nbsp;
+  <img src="assets/icons/terminal.svg" width="18" height="18" alt="" style="vertical-align:middle" /> Automation &nbsp;|&nbsp;
+  <img src="assets/icons/flask.svg" width="18" height="18" alt="" style="vertical-align:middle" /> Homelab &nbsp;|&nbsp;
+  <img src="assets/icons/wrench.svg" width="18" height="18" alt="" style="vertical-align:middle" /> DevSecOps
 </p>
