@@ -699,18 +699,26 @@ calls when visitors open the profile.
 ## <img src="assets/icons/star.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Repositories I've Starred</span>
 
 <!-- JUSTSEC_STARRED_START -->
-Public repositories I've starred, ranked by **stars + forks**.
 
-| Repository | Description | Language | Stars | Forks |
-| :--- | :--- | :--- | ---: | ---: |
-| [morluto/rea](https://github.com/morluto/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | TypeScript | 435724 | 108111 |
-| [obra/superpowers](https://github.com/obra/superpowers) | An agentic skills framework &amp; software development methodology that works. | Shell | 313220 | 27868 |
-| [microsoft/vscode](https://github.com/microsoft/vscode) | Visual Studio Code | TypeScript | 194763 | 44405 |
-| [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. | JavaScript | 185447 | 10258 |
-| [langgenius/dify](https://github.com/langgenius/dify) | Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, | Python | 160524 | 25400 |
-| [langflow-ai/langflow](https://github.com/langflow-ai/langflow) | Langflow is a powerful tool for building and deploying AI-powered agents and workflows. | Python | 156375 | 10343 |
-| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow. | Python | 139986 | 22322 |
-| [earendil-works/pi](https://github.com/earendil-works/pi) | AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI | TypeScript | 120391 | 15484 |
+Public repositories I've starred and actually use.
+
+#### ⭐ **_<!--STARRED_COUNT-->1370<!--/STARRED_COUNT--> starred in total_**
+
+- [**wazuh/wazuh-docker**](https://github.com/wazuh/wazuh-docker) — Wazuh SIEM and XDR stack as Docker containers
+- [**cheaper-inference/OmniRoute**](https://github.com/cheaper-inference/OmniRoute) — free AI gateway: one endpoint across hundreds of providers and models
+- [**vxcontrol/pentagi**](https://github.com/vxcontrol/pentagi) — autonomous AI agents for complex penetration testing
+- [**Augani/dory**](https://github.com/Augani/dory) — local development system for Apple Silicon: containers, Kubernetes, VMs and sandboxes
+- [**Termix-SSH/Termix**](https://github.com/Termix-SSH/Termix) — self-hosted, plugin-based server management
+- [**Infisical/infisical**](https://github.com/Infisical/infisical) — open-source platform for secrets, certificates, access and AI agent security
+- [**Debasish-87/ZeroTrustOps-Platform**](https://github.com/Debasish-87/ZeroTrustOps-Platform) — Kubernetes-native DevSecOps enforcement, scanning IaC and repos on every push
+- [**coollabsio/coolify**](https://github.com/coollabsio/coolify) — self-hostable PaaS for static sites, databases and full-stack apps
+- [**jumpserver/jumpserver**](https://github.com/jumpserver/jumpserver) — open-source privileged access management platform
+- [**OWASP/DockSec**](https://github.com/OWASP/DockSec) — AI-powered Docker security scanner that explains vulnerabilities in plain English
+- [**jetify-com/devbox**](https://github.com/jetify-com/devbox) — instant, predictable and reproducible development environments
+- [**mlabouardy/komiser**](https://github.com/mlabouardy/komiser) — cloud environment inspector across AWS, GCP and Azure
+- [**alibaba/open-code-review**](https://github.com/alibaba/open-code-review) — hybrid deterministic and LLM code review pipeline
+- [**caronc/apprise**](https://github.com/caronc/apprise) — push notifications to almost every platform from one interface
+
 <!-- JUSTSEC_STARRED_END -->
 
 ---

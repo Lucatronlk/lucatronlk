@@ -32,6 +32,15 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Refresh the public starred repository count
+        # The starred list is curated by hand; only the headline count is live.
+        # If the API is unavailable, the previous number is kept.
+        shell: bash
+        continue-on-error: true
+        env:
+          STARRED_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: python3 .github/scripts/update-starred-count.py
+
       - name: Require private contribution access
         shell: bash
         env:
@@ -97,13 +106,13 @@ jobs:
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
       - name: Refresh public repositories starred by Luca
-        # If the public API is temporarily unavailable, the script renders a
-        # curated fallback list while still publishing freshly generated cards.
+        # The list is curated by hand for now; update-starred-repos.py stays in
+        # the repository for when live ranking is switched back on.
         shell: bash
         continue-on-error: true
         env:
           STARRED_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
-        run: python3 .github/scripts/update-starred-repos.py
+        run: python3 .github/scripts/update-starred-count.py
 
       - name: Validate generated SVGs before publishing
         shell: bash
