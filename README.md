@@ -1,41 +1,83 @@
+<div align="center">
+
 # Hello there, I’m Luca 👋
 
-### Security Engineer · DevSecOps · Cloud Security · Platform Engineering · Building secure systems — not just CI/CD pipelines.
+**Security Engineer · DevSecOps · Cloud Security · Platform Engineering**
 
-> **Welcome to the dark side. We have root access.**
+`// Building secure systems — not just CI/CD pipelines.`
 
-I’m a Security Engineer focused on **cloud infrastructure security, DevSecOps, platform security, security automation, and observability** across Azure and AWS environments.
+[![AI](https://img.shields.io/badge/-AI-111827,FF3DC8?style=for-the-badge&logoColor=white)](#homelab)
+[![Azure](https://img.shields.io/badge/-Azure-0E2140,00E5FF?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/azure/)
+[![AWS](https://img.shields.io/badge/-AWS-3A1233,3882F6?style=for-the-badge&logo=amazonwebservices&logoColor=white)](https://docs.aws.amazon.com/)
+[![Terraform](https://img.shields.io/badge/-Terraform-0B2A33,885CFF?style=for-the-badge&logo=terraform&logoColor=white)](https://developer.hashicorp.com/terraform/docs)
+[![Docker](https://img.shields.io/badge/-Docker-241640,D946EF?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/)
+[![Kubernetes](https://img.shields.io/badge/-Kubernetes-3D0F2E,00E5FF?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/docs/)
+[![Vault](https://img.shields.io/badge/-Vault-0E2140,885CFF?style=for-the-badge&logo=vault&logoColor=white)](https://developer.hashicorp.com/vault/docs)
+[![Doppler](https://img.shields.io/badge/-Doppler-0B2A33,3882F6?style=for-the-badge&logo=doppler&logoColor=white)](https://docs.doppler.com/)
+[![SonarQube](https://img.shields.io/badge/-SonarQube-241640,FF3DC8?style=for-the-badge&logo=sonarqube&logoColor=white)](https://docs.sonarsource.com/sonarqube-server/)
+[![JFrog Artifactory](https://img.shields.io/badge/-JFrog%20Artifactory-3A1233,00E5FF?style=for-the-badge&logo=jfrog&logoColor=white)](https://jfrog.com/help/r/jfrog-artifactory-documentation)
+[![Wazuh](https://img.shields.io/badge/-Wazuh-0B2A33,D946EF?style=for-the-badge&logo=wazuh&logoColor=white)](https://documentation.wazuh.com/)
+[![Suricata](https://img.shields.io/badge/-Suricata-3D0F2E,3882F6?style=for-the-badge&logoColor=white)](https://docs.suricata.io/)
+[![Zeek](https://img.shields.io/badge/-Zeek-0E2140,FF3DC8?style=for-the-badge&logoColor=white)](https://docs.zeek.org/)
+[![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-241640,885CFF?style=for-the-badge&logo=githubactions&logoColor=white)](https://docs.github.com/actions)
+[![GitLab CI](https://img.shields.io/badge/-GitLab%20CI-3A1233,D946EF?style=for-the-badge&logo=gitlab&logoColor=white)](https://docs.gitlab.com/ci/)
+[![Azure DevOps](https://img.shields.io/badge/-Azure%20DevOps-0B2A33,00E5FF?style=for-the-badge&logo=azuredevops&logoColor=white)](https://learn.microsoft.com/azure/devops/)
+[![Python](https://img.shields.io/badge/-Python-3D0F2E,885CFF?style=for-the-badge&logo=python&logoColor=white)](https://docs.python.org/3/)
+[![Bash](https://img.shields.io/badge/-Bash-0E2140,D946EF?style=for-the-badge&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/manual/)
+[![PowerShell](https://img.shields.io/badge/-PowerShell-241640,3882F6?style=for-the-badge&logo=powershell&logoColor=white)](https://learn.microsoft.com/powershell/)
+[![Prometheus](https://img.shields.io/badge/-Prometheus-0B2A33,FF3DC8?style=for-the-badge&logo=prometheus&logoColor=white)](https://prometheus.io/docs/)
+[![Grafana](https://img.shields.io/badge/-Grafana-3A1233,885CFF?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com/docs/grafana/)
+[![Loki](https://img.shields.io/badge/-Loki-0E2140,00E5FF?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com/docs/loki/)
+[![Datadog](https://img.shields.io/badge/-Datadog-241640,D946EF?style=for-the-badge&logo=datadog&logoColor=white)](https://docs.datadoghq.com/)
+[![Splunk](https://img.shields.io/badge/-Splunk-3D0F2E,3882F6?style=for-the-badge&logo=splunk&logoColor=white)](https://docs.splunk.com/)
 
-I enjoy working where **security, infrastructure, software engineering, and automation intersect** — especially where security can be engineered directly into platforms and developer workflows instead of becoming another approval step at the end.
+> I break things, fix things and keep asking why they work the way they do. What does this button do? 🔴
 
-My goal is simple:
+**[Tech Stack](#technologies) · [Homelab](#homelab) · [GitHub Stats](#github-stats)**
 
-> **Make the secure way the easiest way to build and operate software.**
+</div>
 
 ---
 
-## 🧭 At a Glance
+## <img src="assets/icons/compass.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">At a Glance</span>
 
 | | |
 |---|---|
-| 🛡️ **Security** | Cloud Security · DevSecOps · Infrastructure Security · IAM · Detection & Response |
-| ☁️ **Cloud & Platform** | Azure · AWS · Kubernetes · Terraform |
-| 🔐 **Security Engineering** | Secrets Management · Least Privilege · Policy-as-Code · Security Guardrails |
-| 🚚 **Software Delivery** | Secure CI/CD · Supply Chain Security · Artifact Security · Reusable Workflows |
-| ⚙️ **Automation** | Python · Bash · PowerShell · Infrastructure & Security Automation |
-| 📊 **Observability** | Splunk · ELK · Datadog · Prometheus · Grafana · Loki · Wazuh |
-| 🌐 **Networking & Ingress** | Tailscale · Caddy · Private DNS · Cloudflare DNS-01 |
-| 🤖 **AI Security** | Local LLMs · AI Gateways · Agent Governance · Shared Skills · Guardrails |
-| 🧪 **Homelab** | Multi-server security lab with zero-trust networking, centralized secrets, observability, network detection and local AI |
-| 🏗️ **Currently Building** | A public security engineering portfolio spanning cloud → CI/CD → supply chain → runtime → detection → AI |
-
-I am a really curious guy, I like understanding **why systems are designed the way they are**, where the trust boundaries are, how they fail, why they fail, when they fail, what happens if I push this button 🔴
+| <img src="assets/icons/shield.svg" width="18" height="18" alt="" /> **Security** | Cloud Security · DevSecOps · Infrastructure Security · IAM · Detection & Response |
+| <img src="assets/icons/layers.svg" width="18" height="18" alt="" /> **Cloud & Platform** | Azure · AWS · Kubernetes · Terraform |
+| <img src="assets/icons/key.svg" width="18" height="18" alt="" /> **Security Engineering** | Secrets Management · Least Privilege · Policy-as-Code · Security Guardrails |
+| <img src="assets/icons/truck.svg" width="18" height="18" alt="" /> **Software Delivery** | Secure CI/CD · Supply Chain Security · Artifact Security · Reusable Workflows |
+| <img src="assets/icons/terminal.svg" width="18" height="18" alt="" /> **Automation** | Python · Bash · PowerShell · Infrastructure & Security Automation |
+| <img src="assets/icons/chart.svg" width="18" height="18" alt="" /> **Observability** | Splunk · ELK · Datadog · Prometheus · Grafana · Loki · Wazuh |
+| <img src="assets/icons/globe.svg" width="18" height="18" alt="" /> **Networking & Ingress** | Tailscale · Caddy · Private DNS · Cloudflare DNS-01 |
+| <img src="assets/icons/robot.svg" width="18" height="18" alt="" /> **AI Security** | Local LLMs · AI Gateways · Agent Governance · Shared Skills · Guardrails |
+| <img src="assets/icons/flask.svg" width="18" height="18" alt="" /> **Homelab** | Multi-server security lab with zero-trust networking, centralized secrets, observability, network detection and local AI |
+| <img src="assets/icons/build-code.svg" width="18" height="18" alt="" /> **Currently Building** | A public security engineering portfolio spanning cloud → CI/CD → supply chain → runtime → detection → AI |
 
 ---
 
-## 🏗️ Projects
+## <img src="assets/icons/blocks.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Projects</span>
 
-### 🧪 Homelab
+### <img src="assets/icons/shield.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Just Security</span>
+
+> **Build it. Break it. Secure it. Improve it.**
+
+Just Security is a collection of hands-on security engineering projects focused on **DevSecOps, cloud security, CI/CD, software supply chain security, observability, AI security, platform engineering and automation**.
+
+Every repository carries the `justsec-` prefix and follows the same loop: build the thing, break it, secure it, improve it.
+
+| Repository | Focus |
+| --- | --- |
+| `justsec-agent-kit` | Agent governance, skills and guardrails |
+| `justsec-cicd-blueprints` | Hardened pipeline templates for GitHub and GitLab |
+| `justsec-cloud-security-guardrails` | Policy-as-code and landing-zone guardrails |
+| `justsec-observability-platform` | Telemetry, dashboards and alerting baselines |
+| `justsec-devsecops-toolkit` | Scanning, SBOM and supply chain automation |
+| `justsec-engineering-lab` | Reproducible lab for security engineering |
+| `justsec-ai-security-gateway` | Guarded LLM gateway and agent egress control |
+| `TBD` | Next project in progress |
+
+### <img src="assets/icons/flask.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Homelab</span>
 
 My homelab is where a lot of curiosity turns into actual engineering.
 
@@ -47,7 +89,7 @@ Every server ships its logs and metrics to **Cronus** for centralized monitoring
 
 Internal services are exposed through **Caddy**, which acts as the reverse-proxy and TLS termination layer for the homelab. Combined with **Tailscale** and internal DNS resolution, this gives services consistent HTTPS endpoints without exposing administrative interfaces directly to the public internet.
 
-## 🖥️ Infrastructure
+## <img src="assets/icons/server.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Infrastructure</span>
 
 | Project / Host | Role | Status |
 | --- | --- | :---: |
@@ -59,7 +101,7 @@ Internal services are exposed through **Caddy**, which acts as the reverse-proxy
 | **`_agent-shared`** | AI DevSecOps Agent Governance Platform | 🟢 Active |
 | **Windows GPU Worker** | On-demand AI Compute | NVIDIA RTX GPU · local inference workloads · centralized logs and metrics |
 
-## 📊 Cronus — Security & Observability Platform
+## <img src="assets/icons/pulse.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Cronus — Security & Observability Platform</span>
 
 **Cronus** is a modular, self-hosted Docker Compose platform I built for **security operations, observability and infrastructure tooling**.
 
@@ -134,7 +176,7 @@ centralized monitoring and alerting
 
 ---
 
-## 🛰️ Athena — Network Security & Telemetry
+## <img src="assets/icons/radar.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Athena — Network Security & Telemetry</span>
 
 **Athena** is my self-hosted network security and observability stack, built with modular Docker Compose configurations.
 
@@ -210,7 +252,7 @@ Cronus handles centralized storage, dashboards, alerting and correlation.
 
 ---
 
-## 🛠️ Ares — Private Infrastructure-as-Code Platform
+## <img src="assets/icons/wrench.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Ares — Private Infrastructure-as-Code Platform</span>
 
 **Ares** is my private, self-hosted Linux platform for **CI/CD, application hosting, automation, home infrastructure and engineering workloads**.
 
@@ -311,7 +353,7 @@ Secrets and destructive actions remain **human-gated**.
 
 Repository-local guidance such as `AGENTS.md` and per-folder operating documentation defines how humans and AI agents are expected to work safely in the environment.
 
-## 🛰️ Argus — Homelab Edge & AI Node
+## <img src="assets/icons/eye.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Argus — Homelab Edge & AI Node</span>
 
 **Argus** is a self-hosted Debian edge node running a single-node Docker Compose stack for **observability, edge services and self-hosted AI**.
 
@@ -376,7 +418,7 @@ Argus also consumes the shared `_agent-shared/` governance layer so coding agent
 
 ---
 
-## 🧠 `_agent-shared` — AI DevSecOps Agent Platform
+## <img src="assets/icons/brain.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">`_agent-shared` — AI DevSecOps Agent Platform</span>
 
 `_agent-shared` is a framework-agnostic governance layer I built to make coding agents behave like a **consistent, cautious DevSecOps engineer** across repositories.
 
@@ -396,7 +438,7 @@ Skills
 Agents
 ```
 
-### 📜 Policy
+### <img src="assets/icons/doc.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Policy</span>
 
 A single operating policy defines the baseline behavior expected from every agent:
 
@@ -409,13 +451,13 @@ A single operating policy defines the baseline behavior expected from every agen
 - secrets never read or printed
 - destructive actions remain human-gated
 
-### 📐 Domain standards
+### <img src="assets/icons/grid.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Domain standards</span>
 
 The platform includes **24 always-on instruction standards** covering:
 
 `Azure` · `AWS` · `Terraform` · `Kubernetes` · `Docker` · `GitHub Actions` · `GitLab CI` · `Python` · `TypeScript` · `Security` · `Migrations` · `AI Agent Safety`
 
-### 🧰 Shared skills
+### <img src="assets/icons/toolbox.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Shared skills</span>
 
 The platform currently contains **206 reusable skills**.
 
@@ -433,7 +475,7 @@ Domains include:
 
 Skills live once and are shared across agents rather than duplicated into individual personas.
 
-### 🤖 Domain agents
+### <img src="assets/icons/robot.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Domain agents</span>
 
 Seven domain agents consume curated skill allow-lists:
 
@@ -447,7 +489,7 @@ The model is deny-by-default:
 
 Agents only receive access to explicitly assigned skills.
 
-### 🔐 Safety as the product
+### <img src="assets/icons/shield.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Safety as the product</span>
 
 Key principles include:
 
@@ -463,7 +505,7 @@ The goal isn’t to make agents maximally autonomous.
 
 It’s to make them **predictable enough to trust with real infrastructure repositories**.
 
-### 🧾 Provenance & governance
+### <img src="assets/icons/seal.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Provenance & governance</span>
 
 The repository tracks:
 
@@ -475,7 +517,7 @@ The repository tracks:
 
 MCP servers, plugins and hooks are treated as **reviewed integration notes**, not silently bundled tooling.
 
-### 🔌 Framework-agnostic by design
+### <img src="assets/icons/plug.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Framework-agnostic by design</span>
 
 The content is plain Markdown with Agent-Skills-style frontmatter.
 
@@ -487,7 +529,7 @@ And because coding alone is apparently no longer complicated enough:
 
 > **It’s dangerous to code alone. Take this AI.**
 
-## 🌐 Zero-Trust Networking
+## <img src="assets/icons/globe.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Zero-Trust Networking</span>
 
 The homelab uses **Tailscale** as its private connectivity layer and **Caddy** as the reverse-proxy and TLS layer for internal services.
 
@@ -559,7 +601,7 @@ private service
 Tailscale / internal network
 ```
 
-## 🔬 Curiosity Drives a Lot of What I Build
+## <img src="assets/icons/sparkle.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Curiosity Drives a Lot of What I Build</span>
 
 A lot of what I know started with:
 
@@ -595,29 +637,29 @@ And occasionally they become all three.
 
 ---
 
-## ⚙️ Technologies
+## <img src="assets/icons/layers.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Technologies</span>
 
-### ☁️ Cloud & Infrastructure
+### <img src="assets/icons/layers.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Cloud & Infrastructure</span>
 
 `Azure` · `AWS` · `Kubernetes` · `Docker` · `Terraform` · `Linux` · `Tailscale` · `Caddy`
 
-### 🔐 Security Engineering
+### <img src="assets/icons/key.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Security Engineering</span>
 
 `HashiCorp Vault` · `Doppler` · `SonarQube` · `Artifactory` · `OPA` · `Wazuh` · `Suricata` · `Zeek` · `CrowdSec` · `fail2ban`
 
-### 🚚 CI/CD
+### <img src="assets/icons/truck.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">CI/CD</span>
 
 `GitHub Actions` · `GitLab CI` · `Azure DevOps` · `Gitea Actions`
 
-### ⚙️ Automation
+### <img src="assets/icons/terminal.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Automation</span>
 
 `Python` · `Bash` · `PowerShell`
 
-### 📊 Observability
+### <img src="assets/icons/chart.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Observability</span>
 
 `Splunk` · `ELK` · `Datadog` · `Prometheus` · `Grafana` · `Loki` · `Vector` · `Promtail` · `Alloy`
 
-### 🤖 AI & Agent Engineering
+### <img src="assets/icons/robot.svg" width="20" height="20" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">AI & Agent Engineering</span>
 
 `Ollama` · `Open WebUI` · `OmniRoute` · `Local LLMs` · `AI Agents` · `AI Gateways` · `Agent Skills`
 
@@ -627,15 +669,20 @@ And occasionally they become all three.
 
 ---
 
-## 📊 GitHub Stats
+## <img src="assets/icons/chart.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">GitHub Stats</span>
 
 <div align="center">
 
-![GitHub Stats](./profile/stats.svg)
-
-![Most Used Languages](./profile/top-langs.svg)
-
-![GitHub Streak](./profile/streak.svg)
+<table cellpadding="0" cellspacing="0" width="616">
+  <tr>
+    <td align="left" valign="top"><img src="./profile/stats.svg" width="300" alt="GitHub stats" /></td>
+    <td width="16"></td>
+    <td align="right" valign="top"><img src="./assets/justsec-languages.svg" width="300" alt="Languages: Python, TypeScript, Shell, Go, Terraform, JavaScript, HTML, CSS" /></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><img src="./profile/streak.svg" width="616" alt="Current streak and contributions" /></td>
+  </tr>
+</table>
 
 </div>
 
@@ -647,7 +694,7 @@ calls when visitors open the profile.
 
 ---
 
-## 🚀 What You’ll Find Here
+## <img src="assets/icons/rocket.svg" width="26" height="26" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">What You’ll Find Here</span>
 
 This GitHub is becoming a practical collection of work around:
 

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="270" viewBox="0 0 304 270" role="img" aria-labelledby="title desc">
+  <title id="title">Most Used Languages</title>
+  <desc id="desc">Languages I work in: Python, TypeScript, Shell, Go, Terraform, JavaScript, HTML and CSS. Static card.</desc>
+  <defs>
+    <clipPath id="bar"><rect x="25" y="60" width="254" height="8" rx="4"/></clipPath>
+  </defs>
+  <rect width="304" height="270" rx="4.5" fill="none"/>
+  <text x="25" y="40" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="18" font-weight="600" fill="#00D5FF">Most Used Languages</text>
+  <g clip-path="url(#bar)">
+    <rect x="25" y="60" width="150" height="8" fill="#00E5FF"/>
+    <rect x="175" y="60" width="40" height="8" fill="#3882F6"/>
+    <rect x="215" y="60" width="30" height="8" fill="#885CFF"/>
+    <rect x="245" y="60" width="20" height="8" fill="#D946EF"/>
+    <rect x="265" y="60" width="14" height="8" fill="#FF3DC8"/>
+  </g>
+  <g font-family="'Segoe UI', Ubuntu, sans-serif" font-size="14" fill="#F8FAFC">
+    <circle cx="25" cy="105" r="4.5" fill="#00E5FF"/><text x="40" y="110">Python</text>
+    <circle cx="150" cy="105" r="4.5" fill="#FF3DC8"/><text x="165" y="110">Terraform</text>
+
+    <circle cx="25" cy="145" r="4.5" fill="#3882F6"/><text x="40" y="150">TypeScript</text>
+    <circle cx="150" cy="145" r="4.5" fill="#00E5FF"/><text x="165" y="150">JavaScript</text>
+
+    <circle cx="25" cy="185" r="4.5" fill="#885CFF"/><text x="40" y="190">Shell</text>
+    <circle cx="150" cy="185" r="4.5" fill="#3882F6"/><text x="165" y="190">HTML</text>
+
+    <circle cx="25" cy="225" r="4.5" fill="#D946EF"/><text x="40" y="230">Go</text>
+    <circle cx="150" cy="225" r="4.5" fill="#885CFF"/><text x="165" y="230">CSS</text>
+  </g>
+</svg>

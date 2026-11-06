@@ -1,8 +1,8 @@
 name: Refresh profile cards
 
 on:
-  schedule:
-    - cron: '37 5 * * *'
+  # schedule:
+  #   - cron: '37 5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,7 +39,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=lucatronlk&show_icons=true&theme=dark
+          options: username=lucatronlk&show_icons=true&theme=dark&hide_border=true&bg_color=00000000
           path: profile/stats.svg.tmp
           core_version: '' # Use action's bundled, lockfile-pinned core; avoid runtime version resolution.
           fail_on_error: 'true'
@@ -49,7 +49,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
-          options: username=lucatronlk&layout=compact&theme=dark
+          options: username=lucatronlk&layout=compact&theme=dark&hide_border=true&bg_color=00000000
           path: profile/top-langs.svg.tmp
           core_version: '' # Use action's bundled, lockfile-pinned core; avoid runtime version resolution.
           fail_on_error: 'true'

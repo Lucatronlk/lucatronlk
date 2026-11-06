@@ -128,7 +128,7 @@ def render_svg(counts: list[int], start: dt.date, today: dt.date) -> str:
     period = html.escape(f"{start.isoformat()} to {today.isoformat()} (UTC)", quote=True)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="480" height="150" viewBox="0 0 480 150" role="img" aria-label="{title}">
 <title>{title}</title>
-<rect width="480" height="150" rx="12" fill="#0d1117"/>
+<rect width="480" height="150" rx="12" fill="none"/>
 <text x="24" y="34" fill="#e6edf3" font-size="18" font-family="sans-serif">Current Streak (window)</text>
 <text x="24" y="78" fill="#58a6ff" font-size="32" font-family="sans-serif">{current} days</text>
 <text x="245" y="67" fill="#e6edf3" font-size="15" font-family="sans-serif">Best in window: {best} days</text>
