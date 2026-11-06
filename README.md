@@ -680,11 +680,7 @@ And occasionally they become all three.
 
 <div align="center">
 
-<img src="./profile/stats.svg" width="300" alt="GitHub stats" />&nbsp;&nbsp;<img src="./assets/justsec-languages.svg" width="300" alt="Languages: Python, TypeScript, Shell, Go, Terraform, JavaScript, HTML, CSS" />
-
-<br /><br />
-
-<img src="./profile/streak.svg" width="616" alt="Current streak and contributions" />
+<img src="./profile/stats.svg" width="300" alt="GitHub stats" />&nbsp;&nbsp;<img src="./assets/justsec-languages.svg" width="300" alt="Languages: Python, TypeScript, Shell, Go, Terraform, JavaScript, HTML, CSS" /><br /><img src="./profile/streak.svg" width="616" alt="Current streak and contributions" />
 
 </div>
 
