@@ -16,7 +16,7 @@ env:
   # JustSec / JustCode brand palette:
   # Night #0A0F1C, cyan #00D5FF, blue #3B82F6,
   # violet #8B5CF6, magenta #EC4899, white #F8FAFC.
-  THEME: 'theme=dark&hide_border=true&bg_color=0A0F1C&title_color=00D5FF&icon_color=8B5CF6&text_color=F8FAFC&disable_animations=true'
+  THEME: 'theme=dark&hide_border=true&border_radius=16&bg_color=0A0F1C&title_color=00D5FF&icon_color=8B5CF6&text_color=F8FAFC&disable_animations=true'
 
 jobs:
   refresh:
@@ -52,6 +52,33 @@ jobs:
           fail_on_error: 'true'
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
+      - name: Match stats card background to the canvas width
+        # github-readme-stats sizes the background rect from its default card
+        # width, which drifts from the real canvas when extra rows are shown.
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('profile/stats.svg.tmp')
+          svg = path.read_text(encoding='utf-8')
+          match = re.search(r'<svg\s+width="(\d+)"\s+height="(\d+)"', svg)
+          if not match:
+              raise SystemExit('stats: canvas size not found')
+          width = int(match.group(1))
+          svg, count = re.subn(
+              r'(data-testid="card-bg"[\s\S]{0,300}?width=")\d+(")',
+              rf'\g<1>{width - 1}\g<2>',
+              svg,
+              count=1,
+          )
+          if count != 1:
+              raise SystemExit('stats: card background not patched')
+          path.write_text(svg, encoding='utf-8')
+          print(f'stats: background matched to {width - 1}px canvas')
+          PY
+
       - name: Generate top eight languages
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
@@ -65,15 +92,17 @@ jobs:
       - name: Generate full-history streak, including accessible private activity
         uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077 # v1.7.0
         with:
-          options: 'user=lucatronlk&hide_border=true&disable_animations=true&background=0A0F1C&stroke=283247&ring=3B82F6&fire=EC4899&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=00D5FF&sideLabels=8B5CF6&dates=94A3B8&timezone=Europe/Bucharest&short_numbers=true'
+          options: 'user=lucatronlk&hide_border=true&border_radius=16&disable_animations=true&background=0A0F1C&stroke=283247&ring=3B82F6&fire=EC4899&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=00D5FF&sideLabels=8B5CF6&dates=94A3B8&timezone=Europe/Bucharest&short_numbers=true'
           path: profile/streak.svg.tmp
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
       - name: Refresh public repositories starred by Luca
-        # If the public API is temporarily unavailable, retain the previous
-        # curated list while still publishing freshly generated stats cards.
+        # If the public API is temporarily unavailable, the script renders a
+        # curated fallback list while still publishing freshly generated cards.
         shell: bash
         continue-on-error: true
+        env:
+          STARRED_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: python3 .github/scripts/update-starred-repos.py
 
       - name: Validate generated SVGs before publishing
