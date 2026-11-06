@@ -105,7 +105,7 @@ Internal services are exposed through **Caddy**, which acts as the reverse-proxy
 | **Ares** | Private Infrastructure-as-Code & CI Platform | 🟢 Active |
 | **Argus** | Edge Node & Self-hosted AI Platform | 🟢 Active |
 | **Apollo** | Storage & Media Infrastructure | 🟢 Active |
-| **`_agent-shared`** | AI DevSecOps Agent Governance Platform | 🟢 Active |
+| **`justsec-agent-kit`** | AI DevSecOps Agent Governance Platform | 🟢 Active |
 | **Windows GPU Worker** | On-demand AI Compute | NVIDIA RTX GPU · local inference workloads · centralized logs and metrics |
 
 ## <img src="assets/icons/pulse.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">Cronus — Security & Observability Platform</span>
@@ -421,13 +421,13 @@ Administrative services remain private.
 
 ### AI-agent ready
 
-Argus also consumes the shared `_agent-shared/` governance layer so coding agents operate under the same safety rules used across infrastructure repositories.
+Argus also consumes the shared `justsec-agent-kit` governance layer so coding agents operate under the same safety rules used across infrastructure repositories.
 
 ---
 
-## <img src="assets/icons/brain.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">`_agent-shared` — AI DevSecOps Agent Platform</span>
+## <img src="assets/icons/brain.svg" width="22" height="22" alt="" /> <span style="font-family:Inter,'Segoe UI',system-ui,sans-serif">`justsec-agent-kit` — AI DevSecOps Agent Platform</span>
 
-`_agent-shared` is a framework-agnostic governance layer I built to make coding agents behave like a **consistent, cautious DevSecOps engineer** across repositories.
+`justsec-agent-kit` is a framework-agnostic governance layer I built to make coding agents behave like a **consistent, cautious DevSecOps engineer** across repositories.
 
 It supports:
 
