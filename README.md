@@ -2,9 +2,9 @@
 
 # Hello there, I’m Luca 👋
 
-**Security Engineer · DevSecOps · Cloud Security · Platform Engineering**
+**<img src="assets/icons/shield.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Security Engineer &nbsp;·&nbsp; <img src="assets/icons/wrench.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;DevSecOps &nbsp;·&nbsp; <img src="assets/icons/layers.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Cloud Security &nbsp;·&nbsp; <img src="assets/icons/server.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Platform Engineering**
 
-`// Building secure systems — not just CI/CD pipelines.`
+<img src="assets/justsec-tagline.svg" width="620" alt="Building secure systems — not just CI/CD pipelines." />
 
 [![AI](https://img.shields.io/badge/-AI-885CFF?style=for-the-badge&logoColor=white)](#homelab)
 [![Azure](https://img.shields.io/badge/-Azure-3882F6?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/azure/)
@@ -33,7 +33,7 @@
 
 > I break things, fix things and keep asking why they work the way they do. What does this button do? 🔴
 
-**[Tech Stack](#technologies) · [Homelab](#homelab) · [GitHub Stats](#github-stats) · [Starred](#repositories-ive-starred)**
+**[<img src="assets/icons/layers.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Tech Stack](#technologies) &nbsp;·&nbsp; [<img src="assets/icons/flask.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Homelab](#homelab) &nbsp;·&nbsp; [<img src="assets/icons/chart.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;GitHub Stats](#github-stats) &nbsp;·&nbsp; [<img src="assets/icons/star.svg" width="18" height="18" alt="" style="vertical-align:middle" />&nbsp;Starred](#repositories-ive-starred)**
 
 </div>
 
@@ -72,14 +72,14 @@ Just Security is a collection of hands-on security engineering projects focused 
 
 🟡 **In progress**
 
-- <img src="assets/justsec/justsec-cicd-blueprints.svg" width="18" height="18" alt="" style="vertical-align:middle" /> &nbsp;[**justsec-cicd-blueprints**](https://github.com/Lucatronlk/justsec-cicd-blueprints) — hardened pipeline templates for GitHub and GitLab
+- <img src="assets/justsec/justsec-cicd-blueprints.svg" width="18" height="18" alt="" style="vertical-align:middle" /> &nbsp;[**justsec-cicd-blueprints**](https://github.com/Lucatronlk/justsec-cicd-blueprints) — hardened pipeline templates for GitHub
 
 ⚪ **Backlog**
 
 - [**justsec-cloud-security-guardrails**](https://github.com/Lucatronlk/justsec-cloud-security-guardrails) — policy-as-code and landing-zone guardrails
 - [**justsec-observability-platform**](https://github.com/Lucatronlk/justsec-observability-platform) — telemetry, dashboards and alerting baselines
 - [**justsec-devsecops-toolkit**](https://github.com/Lucatronlk/justsec-devsecops-toolkit) — scanning, SBOM and supply chain automation
-- [**justsec-engineering-lab**](https://github.com/Lucatronlk/justsec-engineering-lab) — reproducible lab for security engineering
+- [**justsec-engineering-lab**](https://github.com/Lucatronlk/justsec-engineering-lab) — reproducible lab for security engineering, with disposable targets and repeatable pentest runs
 - [**justsec-ai-security-gateway**](https://github.com/Lucatronlk/justsec-ai-security-gateway) — guarded LLM gateway and agent egress control
 - [**justsec-platform-services**](https://github.com/Lucatronlk/justsec-platform-services) — shared security and platform services required by development and DevSecOps teams
 - [**justsec-devsecops-platform**](https://github.com/Lucatronlk/justsec-devsecops-platform) — complete reference implementation showing how applications move securely from source code to runtime
