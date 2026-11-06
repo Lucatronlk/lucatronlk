@@ -61,9 +61,10 @@ jobs:
           fail_on_error: 'true'
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
-      - name: Match stats card background to the canvas width
-        # github-readme-stats sizes the background rect from its default card
-        # width, which drifts from the real canvas when extra rows are shown.
+      - name: Trim stats card to its content
+        # github-readme-stats keeps the background rect at its default width and
+        # over-sizes the canvas once extra rows are shown, which leaves dead
+        # space and shrinks the type at a fixed display width.
         shell: bash
         run: |
           python3 - <<'PY'
@@ -72,10 +73,14 @@ jobs:
 
           path = Path('profile/stats.svg.tmp')
           svg = path.read_text(encoding='utf-8')
-          match = re.search(r'<svg\s+width="(\d+)"\s+height="(\d+)"', svg)
-          if not match:
+          canvas = re.search(r'<svg\s+width="\d+"\s+height="(\d+)"', svg)
+          if not canvas:
               raise SystemExit('stats: canvas size not found')
-          width = int(match.group(1))
+          height = int(canvas.group(1))
+          xs = [float(x) for x in re.findall(r'<text[^>]*?\bx="([\d.]+)"', svg)]
+          width = int(min(467, max(320, (max(xs) if xs else 0) + 70)))
+          svg = re.sub(r'(<svg\s+width=")\d+(")', rf'\g<1>{width}\g<2>', svg, count=1)
+          svg = re.sub(r'(<svg\s+width="\d+"\s+height="\d+"\s+viewBox="0 0 )\d+', rf'\g<1>{width}', svg, count=1)
           svg, count = re.subn(
               r'(data-testid="card-bg"[\s\S]{0,300}?width=")\d+(")',
               rf'\g<1>{width - 1}\g<2>',
@@ -85,7 +90,7 @@ jobs:
           if count != 1:
               raise SystemExit('stats: card background not patched')
           path.write_text(svg, encoding='utf-8')
-          print(f'stats: background matched to {width - 1}px canvas')
+          print(f'stats: canvas trimmed to {width - 1}x{height} for content')
           PY
 
       - name: Generate top eight languages
