@@ -104,7 +104,7 @@ jobs:
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
       - name: Generate full-history streak, including accessible private activity
-        uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077 # v1.7.0
+        uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
         with:
           options: 'user=lucatronlk&hide_border=true&border_radius=16&disable_animations=true&background=0A0F1C&stroke=283247&ring=3B82F6&fire=EC4899&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=00D5FF&sideLabels=8B5CF6&dates=94A3B8&timezone=Europe/Bucharest&short_numbers=true'
           path: profile/streak.svg.tmp
