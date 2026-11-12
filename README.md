@@ -770,7 +770,7 @@ calls when visitors open the profile.
 
 Public repositories I've starred and actually use.
 
-#### ⭐ **_<!--STARRED_COUNT-->1390<!--/STARRED_COUNT--> starred in total_**
+#### ⭐ **_<!--STARRED_COUNT-->1392<!--/STARRED_COUNT--> starred in total_**
 
 - [**wazuh/wazuh-docker**](https://github.com/wazuh/wazuh-docker) — Wazuh SIEM and XDR stack as Docker containers
 - [**cheaper-inference/OmniRoute**](https://github.com/cheaper-inference/OmniRoute) — free AI gateway: one endpoint across hundreds of providers and models
