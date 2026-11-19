@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="195" viewBox="0 0 320 195" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="270" viewBox="0 0 320 270" role="img" aria-labelledby="title desc">
   <title id="title">Most Used Languages</title>
-  <desc id="desc">Languages I work in: Python, TypeScript, Shell, Go, Terraform, JavaScript, HTML and CSS. Static card.</desc>
+  <desc id="desc">Languages I work in: Python, TypeScript, Shell, Go, Terraform, PowerShell, Rego, YAML, Ansible, Groovy, Rust and awk. Static card.</desc>
   <defs>
-    <clipPath id="card"><rect width="320" height="195" rx="16"/></clipPath>
+    <clipPath id="card"><rect width="320" height="270" rx="16"/></clipPath>
     <clipPath id="bar"><rect x="25" y="60" width="270" height="8" rx="4"/></clipPath>
   </defs>
-  <rect width="320" height="195" rx="16" fill="#0A0F1C"/>
+  <rect width="320" height="270" rx="16" fill="#0A0F1C"/>
   <g clip-path="url(#card)">
     <text x="25" y="40" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="18" font-weight="600" fill="#00D5FF">Most Used Languages</text>
     <g clip-path="url(#bar)">
@@ -20,13 +20,19 @@
       <circle cx="175" cy="95" r="4.5" fill="#FF3DC8"/><text x="190" y="100">Terraform</text>
 
       <circle cx="25" cy="125" r="4.5" fill="#3882F6"/><text x="40" y="130">TypeScript</text>
-      <circle cx="175" cy="125" r="4.5" fill="#00E5FF"/><text x="190" y="130">JavaScript</text>
+      <circle cx="175" cy="125" r="4.5" fill="#D946EF"/><text x="190" y="130">Go</text>
 
       <circle cx="25" cy="155" r="4.5" fill="#885CFF"/><text x="40" y="160">Shell</text>
-      <circle cx="175" cy="155" r="4.5" fill="#3882F6"/><text x="190" y="160">HTML</text>
+      <circle cx="175" cy="155" r="4.5" fill="#00D5FF"/><text x="190" y="160">PowerShell</text>
 
-      <circle cx="25" cy="185" r="4.5" fill="#D946EF"/><text x="40" y="190">Go</text>
-      <circle cx="175" cy="185" r="4.5" fill="#885CFF"/><text x="190" y="190">CSS</text>
+      <circle cx="25" cy="185" r="4.5" fill="#8B5CF6"/><text x="40" y="190">Rego</text>
+      <circle cx="175" cy="185" r="4.5" fill="#EC4899"/><text x="190" y="190">YAML</text>
+
+      <circle cx="25" cy="215" r="4.5" fill="#3B82F6"/><text x="40" y="220">Ansible</text>
+      <circle cx="175" cy="215" r="4.5" fill="#22D3EE"/><text x="190" y="220">Groovy</text>
+
+      <circle cx="25" cy="245" r="4.5" fill="#F97316"/><text x="40" y="250">Rust</text>
+      <circle cx="175" cy="245" r="4.5" fill="#FACC15"/><text x="190" y="250">awk</text>
     </g>
   </g>
 </svg>
